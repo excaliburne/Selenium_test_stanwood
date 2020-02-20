@@ -1,7 +1,7 @@
 import random
 import string
 import sys
-from test_support.locators import MainPageLocators, Sidebar, ItemInCategory
+from test_support.locators import MainPageLocators, Sidebar, ItemInCategory, SidebarAny
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -106,7 +106,7 @@ class MainPage(BasePage):
     def click_register_button(self):
         super(MainPage, self).click_element(*MainPageLocators.REGISTRATION_REGISTER_BUTTON)
 
-    """Sidebar"""
+    """Sidebar name specific"""
 
     def click_category_non_food(self):
         super(MainPage, self).click_element(*Sidebar.CATEGORY_NONFOOD)
@@ -116,6 +116,26 @@ class MainPage(BasePage):
     
     def click_category_fish(self):
         super(MainPage, self).click_element(*Sidebar.CATEGORY_FISH)
+
+    """Sidebar name non specific"""
+
+    def click_sidebar_one(self):
+        super(MainPage, self).click_element(*SidebarAny.SIDEBAR_ONE)
+
+    def click_sidebar_two(self):
+        super(MainPage, self).click_element(*SidebarAny.SIDEBAR_TWO)
+
+    def click_sidebar_three(self):
+        super(MainPage, self).click_element(*SidebarAny.SIDEBAR_THREE)
+
+    def click_sidebar_four(self):
+        super(MainPage, self).click_element(*SidebarAny.SIDEBAR_FOUR)
+
+    def click_sidebar_five(self):
+        super(MainPage, self).click_element(*SidebarAny.SIDEBAR_FIVE)
+    
+    def click_sidebar_six(self):
+        super(MainPage, self).click_element(*SidebarAny.SIDEBAR_SIX)
 
 class Items(BasePage):
 

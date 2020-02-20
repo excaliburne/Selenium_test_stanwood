@@ -47,6 +47,16 @@ class Sidebar():
     CATEGORY_FISH = (By.XPATH, "//a[contains(.,' Fisch')]")
     CATEGORY_NONFOOD = (By.XPATH, "//a[contains(.,' NonFood')]")
 
+class SidebarAny():
+    """Sidebar locator without any specific names"""
+
+    SIDEBAR_ONE = (By.XPATH, "//nav/ul/div[1]/a")
+    SIDEBAR_TWO = (By.XPATH, "//nav/ul/div[2]/a")
+    SIDEBAR_THREE = (By.XPATH, "//nav/ul/div[3]/a")
+    SIDEBAR_FOUR = (By.XPATH, "//div[4]/a")
+    SIDEBAR_FIVE = (By.XPATH, "//div[5]/a")
+    SIDEBAR_SIX = (By.XPATH, "//div[6]/a")
+
 class ItemInCategory():
     """After category has been clicked, follow items should appear"""
     FIRST_ITEM =  (By.XPATH, "//div[2]/div/div/a") # First item to appear after any category has been clicked

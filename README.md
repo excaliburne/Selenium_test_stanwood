@@ -1,7 +1,13 @@
 # Introduction
 
 These set of test will run on the basis of https://mcswiss-web-stage.web.app/. 
-The purpose of these tests are to check the Registration, categories and cart features.
+The purpose of these tests are to check the Registration, categories and sidebar link functionalities.
+
+## Test cases
+
+- Test valid registration
+- Test if element is present on page inside a category
+- Test if all sidebar links are working
 
 ## Requirements
 
@@ -18,4 +24,4 @@ Mac: `brew install geckodriver`
 
 ## Extra features
 
-*TestRegistrationValid.py* will register and account by default. If you the form to be filled but not register an account, open the .py and change **register** to False
+*TestRegistrationValid.py* will register an account by default. If you want the form to be filled but not register an account, open the .py and change **register** to False
