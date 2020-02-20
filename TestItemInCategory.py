@@ -18,8 +18,11 @@ class TestItemInCategory(unittest.TestCase):
 
     def test_item_in_category(self):
         category = MainPage(self.driver)
+
+        # Click the "Nonfood" category in sidebar
         category.click_category_non_food()
 
+        # Wait for element to appear and click on first item on list
         item = Items(self.driver)
         item.wait_for_element(30, ItemInCategory.FIRST_ITEM)
         item.click_first_item()

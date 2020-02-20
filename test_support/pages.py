@@ -41,7 +41,7 @@ class BasePage():
         return email
 
 class MainPage(BasePage):
-    # Home page actions
+    # Home page functions
 
     def click_register_link(self):
         super(MainPage, self).click_element(*MainPageLocators.REGISTER_LINK)
@@ -106,7 +106,7 @@ class MainPage(BasePage):
     def click_register_button(self):
         super(MainPage, self).click_element(*MainPageLocators.REGISTRATION_REGISTER_BUTTON)
 
-    """Sidebar name specific"""
+    """Sidebar items - name specific"""
 
     def click_category_non_food(self):
         super(MainPage, self).click_element(*Sidebar.CATEGORY_NONFOOD)
@@ -117,7 +117,7 @@ class MainPage(BasePage):
     def click_category_fish(self):
         super(MainPage, self).click_element(*Sidebar.CATEGORY_FISH)
 
-    """Sidebar name non specific"""
+    """Sidebar items - name non specific"""
 
     def click_sidebar_one(self):
         super(MainPage, self).click_element(*SidebarAny.SIDEBAR_ONE)
@@ -138,7 +138,8 @@ class MainPage(BasePage):
         super(MainPage, self).click_element(*SidebarAny.SIDEBAR_SIX)
 
 class Items(BasePage):
-
+    """This is the items that should appear after a category in sidebar has been clicked"""
+    
     def click_first_item(self):
         super(Items, self).click_element(*ItemInCategory.FIRST_ITEM)
 

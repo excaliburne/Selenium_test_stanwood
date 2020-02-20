@@ -3,10 +3,12 @@ from selenium.webdriver.common.by import By
 class MainPageLocators():
     """All locators for main & registration page"""
 
+    """ Register and signup link """
+
     REGISTER_LINK = (By.XPATH, "//span[contains(.,'Registrieren')]")
     SIGNUP_LINK = (By.XPATH, "//a[contains(.,'Anmelden')]")
 
-    # Registration page
+    """ Registration page """
 
     REGISTRATION_FIRSTNAME = (By.XPATH, "//input[@id=\'formly_1_input_firstName_0\']")
     REGISTRATION_LASTNAME = (By.XPATH, "//input[@id=\'formly_1_input_lastName_1\']")
@@ -36,12 +38,15 @@ class MainPageLocators():
     REGISTRATION_CHECKBOX = (By.XPATH, "//ngb-modal-window[@role='dialog']/div[@role='document']//app-registration-modal/app-modal/div[@class='modal-body']/div/div[2]/div/formly-form/formly-field[20]/app-formly-wrapper-form-field//app-formly-field-checkbox//input[@type='checkbox']")
     REGISTRATION_REGISTER_BUTTON = (By.XPATH, "//button[2]/span")
 
-    SEARCH_BUTTON = (By.XPATH, "//div[2]/button")
-
     SUCCESSFULL_REGISTRATION = (By.XPATH, "//app-root/app-toasts//app-toast//div[@class='toast-header']")
 
+    """Search button """
+
+    SEARCH_BUTTON = (By.XPATH, "//div[2]/button")
+
+
 class Sidebar():
-    """Sidebar"""
+    """Sidebar locator with names"""
 
     CATEGORY_BEVERAGE = (By.XPATH, "//a[contains(.,' Getränke')]")
     CATEGORY_FISH = (By.XPATH, "//a[contains(.,' Fisch')]")
@@ -58,5 +63,5 @@ class SidebarAny():
     SIDEBAR_SIX = (By.XPATH, "//div[6]/a")
 
 class ItemInCategory():
-    """After category has been clicked, follow items should appear"""
+    """After category has been clicked, following items should appear"""
     FIRST_ITEM =  (By.XPATH, "//div[2]/div/div/a") # First item to appear after any category has been clicked

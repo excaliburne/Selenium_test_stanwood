@@ -12,6 +12,7 @@ class TestRegistration(unittest.TestCase):
     """ Full registration page """
 
     def setUp(self):
+        # Initiate driver, change to Firefox() if necessary
         self.driver = webdriver.Chrome()
         self.driver.get("https://mcswiss-web-stage.web.app/")
         self.driver.set_window_size(1920, 1177)
@@ -19,10 +20,12 @@ class TestRegistration(unittest.TestCase):
   
     def test_registration(self):
 
-        register = True # Set to True if you want the test to register an account, leave to False if you want the
+        register = True  # Set to True if you want the test to register an account, leave to False if you want the
                          # test to fill all items but not register an account in the end
 
+        # Setting registration variable to be equal to the MainPage functions in test_support/pages.py
         registration = MainPage(self.driver)
+
         registration.click_register_link()
         registration.set_first_name("John")
         registration.set_last_name("Smith")
@@ -32,7 +35,7 @@ class TestRegistration(unittest.TestCase):
         registration.set_street("Tedre")
         registration.click_calendar_button()
 
-        # calendar action
+        # Open calendar, select year and date
         element = self.driver.find_element(By.XPATH, "//button/i")
         actions = ActionChains(self.driver)
         actions.move_to_element(element).perform()

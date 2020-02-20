@@ -23,6 +23,7 @@ class TestSidebarLinks(unittest.TestCase):
     def test_sidebar_links(self):
         sidebar = MainPage(self.driver)
 
+        # Wait for sidebar to appear and clicks on each sidebar element
         sidebar.wait_for_element(10, SidebarAny.SIDEBAR_ONE)
         sidebar.click_sidebar_one()
         sidebar.click_sidebar_two()
