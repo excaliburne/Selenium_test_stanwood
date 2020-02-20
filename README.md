@@ -8,9 +8,9 @@ The purpose of these tests are to check the Registration, categories and cart fe
 - Python3
 - Selenium WebDriver
 `pip3 install selenium`
-- Selenium geckodriver
+- Selenium geckodriver </br>
 Windows: https://www.softwaretestinghelp.com/geckodriver-selenium-tutorial/ </br>
-Mac: `brew install geckodriver` </br>
+Mac: `brew install geckodriver` 
 
 ## How to use
 
