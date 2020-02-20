@@ -38,7 +38,9 @@ class MainPageLocators():
     REGISTRATION_CHECKBOX = (By.XPATH, "//ngb-modal-window[@role='dialog']/div[@role='document']//app-registration-modal/app-modal/div[@class='modal-body']/div/div[2]/div/formly-form/formly-field[20]/app-formly-wrapper-form-field//app-formly-field-checkbox//input[@type='checkbox']")
     REGISTRATION_REGISTER_BUTTON = (By.XPATH, "//button[2]/span")
 
-    SUCCESSFULL_REGISTRATION = (By.XPATH, "//app-root/app-toasts//app-toast//div[@class='toast-header']")
+    """Successfull registration message"""
+
+    SUCCESSFULL_REGISTRATION = (By.XPATH, "/html/body/app-root/app-toasts/div/app-toast/div/div[1]")
 
     """Search button """
 
@@ -63,5 +65,8 @@ class SidebarAny():
     SIDEBAR_SIX = (By.XPATH, "//div[6]/a")
 
 class ItemInCategory():
-    """After category has been clicked, following items should appear"""
-    FIRST_ITEM =  (By.XPATH, "//div[2]/div/div/a") # First item to appear after any category has been clicked
+    """After any category has been clicked, following items should appear"""
+
+    FIRST_ITEM = (By.XPATH, "//div[2]/div/div/a") # First item to appear after any category has been clicked. Notes: This is valid for any category and not entitled to this specific one
+    SECOND_ITEM = (By.XPATH, "//div[3]/app-product-preview/div/div[2]/div/div/a")
+    THIRD_ITEM = (By.XPATH, "//div[4]/app-product-preview/div/div[2]/div/div/a")

@@ -26,7 +26,9 @@ class TestRegistration(unittest.TestCase):
         # Setting registration variable to be equal to the MainPage functions in test_support/pages.py
         registration = MainPage(self.driver)
 
+        # Click "register link"
         registration.click_register_link()
+
         registration.set_first_name("John")
         registration.set_last_name("Smith")
         registration.set_phone("+49 (2343) 5352 5523")
@@ -88,8 +90,14 @@ class TestRegistration(unittest.TestCase):
         registration.click_register_button()
         print("Test successful! Registration is done.")
 
+        """ Optional check with assertEquals
+        success = registration.return_message_value(*MainPageLocators.SUCCESSFULL_REGISTRATION)
+        self.assertEquals(success, 'Danke für Ihre Registrierung', 'Did not register properly')
+        """
+
+
     def teardown_method(self):
         self.driver.quit()
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

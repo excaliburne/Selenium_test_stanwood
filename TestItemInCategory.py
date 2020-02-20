@@ -25,12 +25,20 @@ class TestItemInCategory(unittest.TestCase):
         # Wait for element to appear and click on first item on list
         item = Items(self.driver)
         item.wait_for_element(30, ItemInCategory.FIRST_ITEM)
+        assert item.is_element_present(*ItemInCategory.FIRST_ITEM)
         item.click_first_item()
 
-        print("Test successful! Item is present on page")
+        self.driver.back()
+
+        # Above is going to previous page and now clicks on second item if present
+        item.wait_for_element(30, ItemInCategory.SECOND_ITEM)
+        assert item.is_element_present(*ItemInCategory.SECOND_ITEM)
+        item.click_second_item()
+
+        print("Test successful! Items are present on page")
   
     def teardown_method(self, method):
         self.driver.quit()
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

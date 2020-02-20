@@ -39,6 +39,7 @@ class BasePage():
         domain = 'xcv.com'
         email = email_account + '@' + domain
         return email
+    
 
 class MainPage(BasePage):
     # Home page functions
@@ -139,9 +140,12 @@ class MainPage(BasePage):
 
 class Items(BasePage):
     """This is the items that should appear after a category in sidebar has been clicked"""
-    
+
     def click_first_item(self):
         super(Items, self).click_element(*ItemInCategory.FIRST_ITEM)
+
+    def click_second_item(self):
+        super(Items, self).click_element(*ItemInCategory.SECOND_ITEM)
 
     
 
