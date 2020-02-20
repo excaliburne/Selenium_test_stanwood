@@ -23,7 +23,22 @@ class TestSidebarLinks(unittest.TestCase):
     def test_sidebar_links(self):
         sidebar = MainPage(self.driver)
 
-        # Wait for sidebar to appear and clicks on each sidebar element
+        sidebar.wait_for_element(10, SidebarAny.SIDEBAR_ONE)
+        
+        # SIDEBAR_LIST is in loctors.py
+        for item in SidebarAny.SIDEBAR_LIST:
+            current_item = self.driver.find_element(By.XPATH, item)
+            print("Link is working")
+            current_item.click()
+        else:
+            print("---- Test result: All links in sidebar are working ----")
+            
+
+
+        """
+        Following code is another implementation of the code above. A for loop is just more concise
+        but you can be more specific with the code below. Ex: clicking element in any order
+
         sidebar.wait_for_element(10, SidebarAny.SIDEBAR_ONE)
         sidebar.click_sidebar_one()
         sidebar.click_sidebar_two()
@@ -31,6 +46,9 @@ class TestSidebarLinks(unittest.TestCase):
         sidebar.click_sidebar_four()
         sidebar.click_sidebar_five()
         sidebar.click_sidebar_six()
+        """
+
+    
 
     def teardown_method(self):
         self.driver.quit()

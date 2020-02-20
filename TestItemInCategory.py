@@ -30,12 +30,12 @@ class TestItemInCategory(unittest.TestCase):
 
         self.driver.back()
 
-        # Above is going to previous page and now clicks on second item if present
+        # driver.back() is going to previous page and now selenium clicks on second item if present
         item.wait_for_element(30, ItemInCategory.SECOND_ITEM)
         assert item.is_element_present(*ItemInCategory.SECOND_ITEM)
         item.click_second_item()
 
-        print("Test successful! Items are present on page")
+        print("---- Test result: Test successful! Items are present on page ----")
   
     def teardown_method(self, method):
         self.driver.quit()

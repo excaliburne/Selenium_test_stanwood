@@ -84,11 +84,11 @@ class TestRegistration(unittest.TestCase):
             print("All element filled but did not register. Set 'register' to 'True' if you want the test to register an actual account")
             sys.exit()
         else:
-            print("Test will register!")
+            print("continuing...")
 
         # Click register button
         registration.click_register_button()
-        print("Test successful! Registration is done.")
+        print("---- Test result: Test successful! Registration is done. ----")
 
         """ Optional check with assertEquals
         success = registration.return_message_value(*MainPageLocators.SUCCESSFULL_REGISTRATION)

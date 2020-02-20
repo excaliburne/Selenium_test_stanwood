@@ -64,6 +64,9 @@ class SidebarAny():
     SIDEBAR_FIVE = (By.XPATH, "//div[5]/a")
     SIDEBAR_SIX = (By.XPATH, "//div[6]/a")
 
+    # This is a list of XPATH strings to be able to iterate through them
+    SIDEBAR_LIST = ["//nav/ul/div[1]/a", "//nav/ul/div[2]/a", "//nav/ul/div[3]/a", "//div[4]/a", "//div[5]/a", "//div[6]/a"]
+
 class ItemInCategory():
     """After any category has been clicked, following items should appear"""
 
