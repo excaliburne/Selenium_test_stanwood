@@ -1,6 +1,6 @@
 # Introduction
 
-These set of test will run on the basis of https://mcswiss-web-stage.web.app/. 
+These sets of test will run on the basis of https://mcswiss-web-stage.web.app/. 
 The purpose of these tests are to check the Registration, categories and sidebar link functionalities.
 
 ## Test cases
@@ -12,7 +12,7 @@ The purpose of these tests are to check the Registration, categories and sidebar
 ## Requirements
 
 - Python3
-- Selenium WebDriver
+- Selenium WebDriver </br>
 `pip3 install selenium`
 - Selenium geckodriver </br>
 Windows: https://www.softwaretestinghelp.com/geckodriver-selenium-tutorial/ </br>
