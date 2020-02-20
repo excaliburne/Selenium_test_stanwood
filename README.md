@@ -6,7 +6,7 @@ The purpose of these tests are to check the Registration, categories and sidebar
 ## Test cases
 
 - Test valid registration
-- Test if element is present on page inside a category
+- Test if any product/element is present on page inside a category. Additional check of a second item.
 - Test if all sidebar links are working
 
 ## Requirements
