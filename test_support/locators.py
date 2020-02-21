@@ -48,14 +48,28 @@ class MainPageLocators():
 
 
 class Sidebar():
-    """Sidebar locator with names"""
+    """Sidebar locators that contain specific names"""
 
     CATEGORY_BEVERAGE = (By.XPATH, "//a[contains(.,' Getränke')]")
     CATEGORY_FISH = (By.XPATH, "//a[contains(.,' Fisch')]")
     CATEGORY_NONFOOD = (By.XPATH, "//a[contains(.,' NonFood')]")
 
+    # Following is a list of all categories and subcategories XPATH
+    SIDEBAR_LIST = ["//a[contains(.,' Getränke')]", "//a[contains(.,\' sonstige Getränke\')]", "//a[contains(.,\' Weine\')]", "//a[contains(.,\' Spirituosen\')]", 
+                    "//a[contains(.,\' MoPro & Eier\')]", "//a[contains(@href, \'/categories/4880054651715584\')]", "//a[contains(.,\' Eier, frisch\')]", "//a[contains(.,\' Milch\')]",
+                    "//a[contains(.,\' Käse\')]", "//a[contains(.,\' Schnittkäse\')]", "//a[contains(.,\' Weichkäse\')]",
+                    "//a[contains(.,\' Printmedien\')]", "//a[contains(.,\' Bücher und Zeitschriften\')]", "//a[contains(.,\' Bücher Kochen und Backen\')]",
+                    "//a[contains(.,\' NonFood\')]", "//a[contains(.,\' Haushaltsgeräte\')]", "//a[contains(.,\' Küchenhelfer\')]", "//a[contains(.,\' Körperpflege & Kosmetik\')]",
+                    "//a[contains(.,\' Gesichtsreinigung und pflege\')]", "//a[contains(.,\' Seife\')]", "//a[contains(.,\' Körperöl und Körperpflege\')]",
+                    "//a[contains(.,\' Badezusätze & Dusch Präparate\')]", "//a[contains(.,\' Haarpflege\')]",
+                    "//a[contains(.,\' Backwaren\')]", "//a[contains(.,\' Brot & Backwaren frisch\')]", "//a[contains(.,\' Spezialitäten frisch\')]",
+                    "//a[contains(.,\' Kuchen und Torten frisch\')]", "//a[contains(.,\' Pikantes Gebäck frisch\')]", "//a[contains(.,\' Brötchen frisch\')]",
+                    "//a[contains(.,\' Standardgebäck frisch\')]", "//a[contains(.,\' Brot frisch\')]",
+                    "//a[contains(.,\' Fleisch & Wurst\')]", "//a[contains(@href, \'/categories/6299182780383232\')]", "//a[contains(@href, \'/categories/4902624503529472\')]" ]
+
+
 class SidebarAny():
-    """Sidebar locator without any specific names"""
+    """Sidebar positional locators (without any specific names)"""
 
     SIDEBAR_ONE = (By.XPATH, "//nav/ul/div[1]/a")
     SIDEBAR_TWO = (By.XPATH, "//nav/ul/div[2]/a")
@@ -64,12 +78,14 @@ class SidebarAny():
     SIDEBAR_FIVE = (By.XPATH, "//div[5]/a")
     SIDEBAR_SIX = (By.XPATH, "//div[6]/a")
 
-    # This is a list of XPATH strings to be able to iterate through them
-    SIDEBAR_LIST = ["//nav/ul/div[1]/a", "//nav/ul/div[2]/a", "//nav/ul/div[3]/a", "//div[4]/a", "//div[5]/a", "//div[6]/a"]
+    # This is a list of XPATH strings of sidebar
+    SIDEBAR_LIST_ANY = ["//nav/ul/div[1]/a", "//nav/ul/div[2]/a", "//nav/ul/div[3]/a", "//div[4]/a", "//div[5]/a", "//div[6]/a"]
 
 class ItemInCategory():
     """After any category has been clicked, following items should appear"""
 
-    FIRST_ITEM = (By.XPATH, "//div[2]/div/div/a") # First item to appear after any category has been clicked. Notes: This is valid for any category and not entitled to this specific one
+    FIRST_ITEM = (By.XPATH, "//div[2]/div/div/a") # First item to appear after any category has been clicked. 
+                                                  # Note: This is valid for any category and not entitled to this specific one
+
     SECOND_ITEM = (By.XPATH, "//div[3]/app-product-preview/div/div[2]/div/div/a")
     THIRD_ITEM = (By.XPATH, "//div[4]/app-product-preview/div/div[2]/div/div/a")
