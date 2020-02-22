@@ -66,7 +66,7 @@ class TestRegistration(unittest.TestCase):
         registration.set_company_name("MB")
 
         # uploading photo
-        self.driver.find_element(By.ID, "formly_2_file_businessLicense_12").send_keys("/Users/jeremy/Downloads/devolon.png")
+        self.driver.find_element(By.ID, "formly_2_file_businessLicense_12").send_keys("/Users/jeremy/Downloads/devolon.png") # change the path to your own path
 
         # Select company type
         registration.click_company_type()

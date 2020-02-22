@@ -1,2 +1,3 @@
-*.log
-.gitignore
+.log
+.pyc
+__pychache__
