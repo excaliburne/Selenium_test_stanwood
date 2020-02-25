@@ -7,6 +7,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
 from test_support.pages import MainPageLocators, MainPage, SidebarAny, Sidebar
 
 
@@ -15,7 +16,11 @@ class TestSidebarLinks(unittest.TestCase):
     """ Testing if all sidebar links (even subcategories) are functional """
 
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument('--no-sandbox')
+    
+        self.driver = webdriver.Chrome('/usr/bin/google-chrome', options=chrome_options)
         self.driver.get("https://mcswiss-web-stage.web.app/")
         self.driver.set_window_size(1920, 1177)
         self.wait = WebDriverWait(self.driver, 100)
