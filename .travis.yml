@@ -5,8 +5,18 @@ python:
 install:
   - pip install -r requirements.txt
 
-before_script:
-  - brew install geckodriver
+env:
+  global:
+    - DRIVER=selenium_chrome
+    - CHROME_BIN=/usr/bin/google-chrome
+
+before_install:
+    - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+    - sudo dpkg -i google-chrome*.deb
+
+install:
+  - google-chrome --version
+  - chromedriver --version
 
 script:
   - "python3 TestSidebarLinks.py"
