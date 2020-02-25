@@ -7,6 +7,7 @@ class MainPageLocators():
 
     REGISTER_LINK = (By.XPATH, "//span[contains(.,'Registrieren')]")
     SIGNUP_LINK = (By.XPATH, "//a[contains(.,'Anmelden')]")
+    
 
     """ Registration page """
 

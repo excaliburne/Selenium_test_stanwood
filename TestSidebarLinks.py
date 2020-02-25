@@ -25,7 +25,7 @@ class TestSidebarLinks(unittest.TestCase):
 
         sidebar.wait_for_element(10, SidebarAny.SIDEBAR_ONE)
 
-        # SIDEBAR_LIST is in loctors.py
+        # SIDEBAR_LIST is in locators.py
         for item in Sidebar.SIDEBAR_LIST:
             current_item = self.driver.find_element(By.XPATH, item)
             current_item.click()

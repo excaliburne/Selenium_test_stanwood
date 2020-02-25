@@ -29,6 +29,7 @@ class TestRegistration(unittest.TestCase):
         # Click "register link"
         registration.click_register_link()
 
+        # Fill information details
         registration.set_first_name("John")
         registration.set_last_name("Smith")
         registration.set_phone("+49 (2343) 5352 5523")
