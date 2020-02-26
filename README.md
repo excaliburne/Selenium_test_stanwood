@@ -30,4 +30,3 @@ Mac: `brew install geckodriver`
 
 *TestRegistrationValid.py* will register an account by default. If you want the form to be filled but not register an account, open the .py and change **register** to False
 
-For *TestRegistrationValid.py* make sure to open the code and change the location of the photo you want to upload.
