@@ -26,3 +26,5 @@ install:
  
 script:
   - "python3 TestSidebarLinks.py"
+  - "python3 TestItemInCategory.py"
+  - "python3 TestRegistrationValid.py"

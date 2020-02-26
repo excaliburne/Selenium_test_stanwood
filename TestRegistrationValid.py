@@ -1,12 +1,15 @@
 import unittest
 import time
-import sys
+import sys, os
 import json
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 from test_support.pages import MainPageLocators, MainPage
+
+my_path = os.path.abspath(os.path.dirname(__file__))
+
 
 class TestRegistration(unittest.TestCase):
     """ Full registration page """
@@ -66,8 +69,7 @@ class TestRegistration(unittest.TestCase):
         # Set company name
         registration.set_company_name("MB")
 
-        # uploading photo
-        self.driver.find_element(By.ID, "formly_2_file_businessLicense_12").send_keys("/Users/jeremy/Downloads/devolon.png") # change the path to your own path
+        self.driver.find_element(By.ID, "formly_2_file_businessLicense_12").send_keys(os.path.join(my_path, "img/devolon.png")) # change the path to your own path
 
         # Select company type
         registration.click_company_type()
@@ -90,6 +92,7 @@ class TestRegistration(unittest.TestCase):
         # Click register button
         registration.click_register_button()
         print("---- Test result: Test successful! Registration is done. ----")
+        time.sleep(6)
 
         """ Optional check with assertEquals
         success = registration.return_message_value(*MainPageLocators.SUCCESSFULL_REGISTRATION)

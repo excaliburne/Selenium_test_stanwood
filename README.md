@@ -22,6 +22,10 @@ Mac: `brew install geckodriver`
 
 `python3 ChooseYourTest.py` replace with desired test
 
+## Integration
+
+".travis.yml" file contains a full integration script for Travis CI
+
 ## Extra features
 
 *TestRegistrationValid.py* will register an account by default. If you want the form to be filled but not register an account, open the .py and change **register** to False
