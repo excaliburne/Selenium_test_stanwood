@@ -16,7 +16,7 @@ class TestSidebarLinks(unittest.TestCase):
 
     def setUp(self):
     
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome('chromedriver')
         self.driver.get("https://mcswiss-web-stage.web.app/")
         self.driver.set_window_size(1920, 1177)
         self.wait = WebDriverWait(self.driver, 100)
